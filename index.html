@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tactical Zone</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="hud-section">
+      <span class="label">HP</span>
+      <div id="health-bar-bg"><div id="health-bar-fill"></div></div>
+    </div>
+    <div class="hud-section">
+      <span class="label">AMMO</span>
+      <div id="ammo-pips"></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="hud-section">
+      <span class="label">WAVE</span>
+      <span class="value" id="wave-val">-</span>
+    </div>
+    <div class="hud-section">
+      <span class="label">SCORE</span>
+      <span class="value" id="score-val">0</span>
+    </div>
+    <div class="hud-section" id="event-hud-section">
+      <span class="label" id="event-label">NEXT EVENT</span>
+      <span class="value" id="event-val">2:00</span>
+    </div>
+  </div>
+
+  <!-- Game canvas -->
+  <div id="game-wrap">
+    <canvas id="game" width="800" height="560"></canvas>
+
+    <!-- Event banner -->
+    <div id="event-banner">
+      <span id="event-banner-title"></span>
+      <span id="event-banner-desc"></span>
+    </div>
+
+    <!-- Wave flash -->
+    <div id="wave-flash"></div>
+
+    <!-- Kill feed -->
+    <div id="killfeed"></div>
+
+    <!-- Start / Game-over overlay -->
+    <div id="overlay">
+      <h1 id="overlay-title">TACTICAL ZONE</h1>
+      <p class="sub" id="overlay-sub">100 Bots &mdash; 5 Waves &mdash; Choose Difficulty</p>
+      <div class="instructions">
+        <strong>WASD</strong> / Arrow Keys &mdash; Move<br>
+        <strong>Mouse</strong> &mdash; Aim<br>
+        <strong>Left Click</strong> &mdash; Shoot<br>
+        <strong>R</strong> &mdash; Reload<br><br>
+        Survive all 5 waves to win<br><br>
+        <strong>EXTREME EVENTS</strong> trigger every 2 min!
+      </div>
+      <div class="diff-select" id="diff-select">
+        <button id="btn-beginner" class="diff-btn diff-beginner">BEGINNER</button>
+        <button id="btn-skilled" class="diff-btn diff-skilled">SKILLED</button>
+      </div>
+      <p id="overlay-result"></p>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
+
+﻿
